@@ -5,17 +5,17 @@ import Counter from "./component/Counter";
 function App() {
   return (
     <div>
-      {/* <User render={ (isLoggedIn)=> (isLoggedIn ? 'milton': 'Guest') }/> */}
-      <Counter
-        render={(count, incrmentCounter) => (
-          <MouseHoverCounter count={count} incrmentCounter={incrmentCounter} />
-        )}
-      />
-      <Counter
-        render={(count, incrmentCounter) => (
+      <Counter>
+        {(count, incrmentCounter) => (
           <ClickCounter count={count} incrmentCounter={incrmentCounter} />
         )}
-      />
+      </Counter>
+
+      <Counter>
+        {(count, incrmentCounter) => (
+          <MouseHoverCounter count={count} incrmentCounter={incrmentCounter} />
+        )}
+      </Counter>
     </div>
   );
 }
