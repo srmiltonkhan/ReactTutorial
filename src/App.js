@@ -1,11 +1,12 @@
-import Clock from "./component/Clock";
+import React from "react";
+import Todo from "./component/Todo";
 
-function App() {
-  return (
-    <>
-      <Clock/>
-    </>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Todo />
+      </>
+    );
+  }
 }
-
-export default App;
